@@ -8,15 +8,26 @@ export default {
   parameters: {
     layout: 'centered',
   },
-  argTypes: {
-    onClick: { action: 'onChange' },
-  },
-  render: (args) => html`<one-input @onchange=${args.onClick} label=${args.label}></one-input>`,
+  argTypes: {},
+  render: (args) => html`
+    <one-input 
+      label=${args.label}
+      placeholder=${args.placeholder}
+    ></one-input>
+  `
 } as Meta
 
 export const Default: StoryObj = {
   name: 'Default',
   args: {
-    label: 'Email: ',
+    label: 'Label',
+  },
+}
+
+export const Placeholder: StoryObj = {
+  name: 'Placeholder',
+  args: {
+    label: 'Label',
+    placeholder: 'Placeholder text'
   },
 }

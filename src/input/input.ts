@@ -1,24 +1,25 @@
-import { html, css, LitElement } from 'lit'
+import { html, LitElement } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
+import { InputStyle } from './input.styles';
 
 @customElement('one-input')
 export class OneInput extends LitElement {
-    static styles = css`
-    
-  `
+    static styles = InputStyle;
 
     @property()
-    label = 'Default'
+    label: string = ''
+
+    @property()
+    placeholder: string = ''
+
 
     render() {
         return html`
-        <label>${this.label}</label>
-        <input @change=${this.onChange} type="text">
+        <div class="wrapper">
+            <label>${this.label}</label>
+            <input type="text" placeholder=${this.placeholder} />
+        </div>
     `
-    }
-
-    private onChange(e: any) {
-        console.log(e.target.value);
     }
 }
 

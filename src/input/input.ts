@@ -12,12 +12,14 @@ export class OneInput extends LitElement {
     @property()
     placeholder: string = ''
 
+    @property()
+    type: string = 'text'
 
     render() {
         return html`
         <div class="wrapper">
             <label>${this.label}</label>
-            <input type="text" placeholder=${this.placeholder} />
+            <input type=${this.type} placeholder=${this.placeholder} />
         </div>
     `
     }

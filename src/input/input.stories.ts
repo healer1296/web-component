@@ -13,6 +13,7 @@ export default {
     <one-input 
       label=${args.label}
       placeholder=${args.placeholder}
+      type=${args.type}
     ></one-input>
   `
 } as Meta
@@ -31,3 +32,13 @@ export const Placeholder: StoryObj = {
     placeholder: 'Placeholder text'
   },
 }
+
+export const InputNumber: StoryObj = {
+  name: 'Input number',
+  args: {
+    label: 'Label',
+    placeholder: 'Enter number',
+    type: 'number'
+  },
+}
+

@@ -8,6 +8,7 @@ export const InputStyle = css`
     .wrapper {
         display: block;
         margin-bottom: 1rem;
+        padding: 1rem;
     }
 
     input { 

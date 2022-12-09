@@ -1,19 +1,21 @@
 import { Meta, StoryObj } from '@storybook/web-components'
-import { html } from 'lit'
+import { html, nothing } from 'lit'
 
 import './input'
 
 export default {
+  
   title: 'Input',
   parameters: {
     layout: 'centered',
   },
-  argTypes: {},
+  
   render: (args) => html`
     <one-input 
-      label=${args.label}
-      placeholder=${args.placeholder}
-      type=${args.type}
+      label=${args.label || nothing}
+      placeholder=${args.placeholder || nothing}
+      type=${args.type || nothing}
+      disabled: ${args.disabled}
     ></one-input>
   `
 } as Meta
@@ -39,6 +41,15 @@ export const InputNumber: StoryObj = {
     label: 'Label',
     placeholder: 'Enter number',
     type: 'number'
+  },
+}
+
+export const InputDisabled: StoryObj = {
+  name: 'Input disable',
+  args: {
+    label: 'Label',
+    placeholder: 'Input disabled',
+    disabled: true
   },
 }
 

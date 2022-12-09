@@ -1,4 +1,4 @@
-import { html, LitElement } from 'lit'
+import { html, LitElement, nothing } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import { InputStyle } from './input.styles';
 
@@ -15,11 +15,14 @@ export class OneInput extends LitElement {
     @property()
     type: string = 'text'
 
+    @property()
+    disabled: boolean = false;
+
     render() {
         return html`
         <div class="wrapper">
-            <label>${this.label}</label>
-            <input type=${this.type} placeholder=${this.placeholder} />
+            <label>${this.label || nothing}</label>
+            <input type=${this.type || nothing} placeholder=${this.placeholder || nothing} ?disabled=${this.disabled} />
         </div>
     `
     }

@@ -1,0 +1,23 @@
+:host {
+    --one-color: #333333;
+    --one-background: #ffffff;
+    --one-border-radius: 5px;
+    --one-border-color: #333333;
+    --one-box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);;
+    --one-border: none;
+    --one-width: 100%;
+    --one-height: 100%;
+    --one-padding: 1rem;
+}
+
+button {
+    color: var(--one-color);
+    background: var(--one-background);
+    border: var(--one-border);
+    border-radius: var(--one-border-radius);
+    border-color: var(--one-border-color);
+    box-shadow: var(--one-box-shadow);
+    width: var(--one-width);
+    height: var(--one-height);
+    padding: var(--one-padding)
+}

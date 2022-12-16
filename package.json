@@ -19,7 +19,9 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
-    "lit": "^2.4.0"
+    "elix": "15.0.1",
+    "lit": "^2.4.0",
+    "sass": "^1.56.2"
   },
   "devDependencies": {
     "@babel/core": "^7.20.2",

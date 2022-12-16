@@ -1,1 +1,1 @@
-export  * from './input/input';
+export  * from './lib/connect-button/connect-button';

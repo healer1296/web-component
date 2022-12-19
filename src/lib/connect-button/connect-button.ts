@@ -18,7 +18,7 @@ export class ConnectButton extends LitElement implements ConnectButtonInterface 
         return html`
             <button>
                 <slot></slot>
-                <span><strong>${this.formatAddress('0x0D090f432CdAFf736a952e590875D59e4492E3aa')}</strong></span>
+                <span>${this.formatAddress('0x0D090f432CdAFf736a952e590875D59e4492E3aa')}</span>
                 <!-- <div ?hidden=${!this.showBalance}><small>0.005ETH</small></div> -->
                 <slot></slot>
             </button>

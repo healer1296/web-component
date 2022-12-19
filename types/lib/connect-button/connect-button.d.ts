@@ -7,9 +7,10 @@ export declare class ConnectButton extends LitElement implements ConnectButtonIn
     static styles: import("lit").CSSResult;
     showBalance: boolean;
     render(): import("lit-html").TemplateResult<1>;
+    formatAddress(address: string): string;
 }
 declare global {
     interface HTMLElementTagNameMap {
-        'connect-button': ConnectButton;
+        'one-connect-button': ConnectButton;
     }
 }

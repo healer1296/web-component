@@ -16,7 +16,7 @@ interface Args {
   showBalance: boolean
 }
 
-const Template: Story<Args> = (args) => html`<one-connect-button showBalance=${args.showBalance}></one-connect-button>`;
+const Template: Story<Args> = (args) => html`<one-connect-button ${args}></one-connect-button> <button>12322123</button>`;
 
 export const Default: Story<Args> = Template.bind({});
 Default.args = {
